@@ -9,7 +9,8 @@
     <p class="lead">Jumbotron</p>
     <hr class="my-4">
     <p>Some more text</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more<a>
+    <%= link_to 'Edit', edit_friend_path(@friend), class: "btn btn-secondary"  %> 
+    <%= link_to 'Back', friends_path, class: "btn btn-dark"  %>
   </div>
 </div>
 
@@ -27,6 +28,3 @@
   <strong>Twitter:</strong>
   <%= @friend.twitter %>
 </p>
-
-<%= link_to 'Edit', edit_friend_path(@friend), class: "btn btn-secondary"  %> 
-<%= link_to 'Back', friends_path, class: "btn btn-dark"  %>
