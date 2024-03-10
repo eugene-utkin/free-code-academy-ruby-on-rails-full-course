@@ -2,7 +2,10 @@
 
 <div class="p-5 mb-4 bg-body-tertiary rounded-3">
   <div class="container-fluid py-5">
-    <h1 class="display-4"><%= @friend.first_name %></h1>
+    <h1 class="display-4">
+      <%= @friend.first_name %>
+      <%= @friend.last_name %>
+    </h1>
     <p class="lead">Jumbotron</p>
     <hr class="my-4">
     <p>Some more text</p>
