@@ -11,7 +11,7 @@ gem 'webpacker', '~>3.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'psych', '< 4'
-
+gem 'devise', '~> 4.9', '>= 4.9.3'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
