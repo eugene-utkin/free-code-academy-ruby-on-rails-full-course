@@ -22,6 +22,8 @@
           <li class="nav-item">
             <%= link_to 'Edit Profile', edit_user_registration_path, class: "nav-link" %>
           </li>
+        <% else %>
+
         <% end %>
         <li class="nav-item">
           <%= link_to 'Sign Up', new_user_registration_path, class: "nav-link" %>
