@@ -16,7 +16,6 @@
     <% f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "new-password" %>
     <% if @minimum_password_length %>
-      <br />
       <em><%= @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>
@@ -47,7 +46,6 @@
     </div>
   </div>
 </div>
-
 
 <br/>
 <%= link_to "Back", :back %>
