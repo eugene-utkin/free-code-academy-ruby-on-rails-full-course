@@ -3,34 +3,36 @@
     <h4>Log in</h4>
   </div>
   <div class="card-body">
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <p class="card-text">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field form-group mb-3">
+          <% f.label :email %><br />
+          <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="field form-group mb-3">
+          <% f.label :password %><br />
+          <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "current-password" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field form-group mb-3">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
+
+        <div class="actions">
+          <%= f.submit "Log in", class: "btn btn-secondary" %>
+        </div>
+      <% end %>
+    </p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
 
 <h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field form-group mb-3">
-    <% f.label :email %><br />
-    <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field form-group mb-3">
-    <% f.label :password %><br />
-    <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field form-group mb-3">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in", class: "btn btn-secondary" %>
-  </div>
-<% end %>
 <br/>
 <%= render "devise/shared/links" %>
