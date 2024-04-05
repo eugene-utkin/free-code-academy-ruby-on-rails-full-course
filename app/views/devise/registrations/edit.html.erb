@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-    Featured
+    <h2>Edit Profile<% resource_name.to_s.humanize %></h2>
   </div>
   <div class="card-body">
     <h5 class="card-title">Special title treatment</h5>
@@ -8,8 +8,6 @@
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-
-<h2>Edit Profile<% resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
