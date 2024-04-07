@@ -34,7 +34,7 @@
   <div class="field form-group mb-3">
     <%= form.text_field :user_id, class: "form-control", placeholder: "User Id" %>
   </div>
-  <%= current_user %>
+  <%= current_user.inspect %>
   <br/>
   <div class="actions">
     <%= form.submit class: "btn btn-secondary" %>
