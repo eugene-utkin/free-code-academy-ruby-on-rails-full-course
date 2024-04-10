@@ -24,6 +24,7 @@
         <% if friend.user == current_user %>
           <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
           <td><%= button_to 'Destroy', friend, method: :delete, class: "nav-link delete-link" %></td>
+        <% else %>
         <% end %>
       </tr>
     <% end %>
