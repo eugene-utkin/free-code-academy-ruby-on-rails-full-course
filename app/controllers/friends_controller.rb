@@ -59,7 +59,7 @@ class FriendsController < ApplicationController
   end
 
   def correct_user
-    @friend = current_user
+    @friend = current_user.friends.find_by(id: params[:id])
   end
 
   private
