@@ -59,7 +59,7 @@ class FriendsController < ApplicationController
   end
 
   def correct_user
-
+    @friend = current_user
   end
 
   private
