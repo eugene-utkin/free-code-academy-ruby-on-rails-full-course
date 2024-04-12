@@ -14,7 +14,7 @@ class FriendsController < ApplicationController
 
   # GET /friends/new
   def new
-    @friend = Friend.new
+    # @friend = Friend.new
   end
 
   # GET /friends/1/edit
