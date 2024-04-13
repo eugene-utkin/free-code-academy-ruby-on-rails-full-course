@@ -13,22 +13,24 @@
 
   <tbody>
     <% @friends.each do |friend| %>
-      <tr>
-        <td><%= friend.first_name %></td>
-        <td><%= friend.last_name %></td>
-        <td><%= friend.email %></td>
-        <td><%= friend.phone %></td>
-        <td><%= friend.twitter %></td>
-        <td><%= friend.user_id %></td>
-        <td><%= link_to 'Show', friend %></td>
-        <% if friend.user == current_user %>
-          <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
-          <td><%= button_to 'Destroy', friend, method: :delete, class: "nav-link delete-link" %></td>
-        <% else %>
-          <td></td>
-          <td></td>
-        <% end %>
-      </tr>
+      <% if friend.user == current_user %>
+        <tr>
+          <td><%= friend.first_name %></td>
+          <td><%= friend.last_name %></td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone %></td>
+          <td><%= friend.twitter %></td>
+          <td><%= friend.user_id %></td>
+          <td><%= link_to 'Show', friend %></td>
+          <% if friend.user == current_user %>
+            <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+            <td><%= button_to 'Destroy', friend, method: :delete, class: "nav-link delete-link" %></td>
+          <% else %>
+            <td></td>
+            <td></td>
+          <% end %>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
