@@ -16,7 +16,7 @@
         <% if friend.user == current_user %>
           <tr>
             <td>
-              <%= link_to friend.first_name, friend %>
+              <%= link_to friend.first_name + " ", friend %>
               <%= friend.first_name %> 
               <%= friend.last_name %>
             </td>
